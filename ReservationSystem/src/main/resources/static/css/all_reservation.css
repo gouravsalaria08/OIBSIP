@@ -1,0 +1,53 @@
+/* all-reservations.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #004d40;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+table {
+    width: 90%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 30px auto;
+}
+
+th, td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    background-color: #00796b;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+    transition: background-color 0.3s ease;
+}

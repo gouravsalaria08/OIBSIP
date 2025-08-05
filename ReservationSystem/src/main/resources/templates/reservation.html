@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Reservation Form</title>
+    <link rel="stylesheet" href="/css/reservation.css">
+</head>
+
+<body>
+<form th:action="@{/reservation}" method="post" th:object="${reservation}">
+    <h2>Reservation Form</h2>
+
+    <input type="text" th:field="*{passengerName}" placeholder="Passenger Name" required />
+    <input type="text" th:field="*{trainNumber}" placeholder="Train Number" required />
+    <input type="text" th:field="*{trainName}" placeholder="Train Name" required />
+    <input type="text" th:field="*{travelClass}" placeholder="Class Type (e.g. Sleeper)" required />
+    <input type="text" th:field="*{fromStation}" placeholder="From Station" required />
+    <input type="text" th:field="*{toStation}" placeholder="To Station" required />
+    <input type="date" th:field="*{journeyDate}" required />
+
+    <button type="submit">Insert</button>
+    <!-- Add this anywhere outside the <form> tag -->
+    <p style="text-align: right; margin-right: 40px;">
+        <a href="/all-reservations" style="text-decoration: none; color: #2e6da4;">📄 View All Reservations</a>
+    </p>
+
+</form>
+</body>
+</html>

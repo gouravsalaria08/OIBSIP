@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Train Reservation System</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+<form method="post" action="/login">
+    <h2>Verify yourself &#128512;</h2>
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+
+    <p th:if="${error}" style="color:red;" th:text="${error}"></p>
+</form>
+
+
+</body>
+</html>

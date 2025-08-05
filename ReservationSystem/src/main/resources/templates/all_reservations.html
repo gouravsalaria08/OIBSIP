@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Reservations</title>
+    <link rel="stylesheet" href="/css/all_reservation.css">
+</head>
+<body>
+<h2>📄 All Train Reservations</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Passenger</th>
+        <th>Train No</th>
+        <th>Train Name</th>
+        <th>Class</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Journey Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="res : ${reservations}">
+        <td th:text="${res.id}"></td>
+        <td th:text="${res.passengerName}"></td>
+        <td th:text="${res.trainNumber}"></td>
+        <td th:text="${res.trainName}"></td>
+        <td th:text="${res.travelClass}"></td>
+        <td th:text="${res.fromStation}"></td>
+        <td th:text="${res.toStation}"></td>
+        <td th:text="${res.journeyDate}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

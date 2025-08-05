@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Confirm Cancellation</title></head>
+<body>
+<h2>Confirm Cancellation</h2>
+<div>
+    <p th:text="'Passenger: ' + ${reservation.passengerName}" />
+    <p th:text="'Train: ' + ${reservation.trainNumber} + ' - ' + ${reservation.trainName}" />
+    <p th:text="'From: ' + ${reservation.fromStation} + ' To: ' + ${reservation.toStation}" />
+    <p th:text="'Date: ' + ${reservation.journeyDate}" />
+</div>
+
+<form action="/confirm-cancel" method="post">
+    <input type="hidden" name="id" th:value="${reservation.id}" />
+    <button type="submit">OK</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cancel Reservation</title>
+    <link rel="stylesheet" th:href="@{/css/cancellation.css}">
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="/reservation">Make Reservation</a>
+    <a href="/all-reservations">View All</a>
+    <a href="/cancellation" class="active">Cancel Reservation</a>
+</nav>
+
+<div class="container">
+    <h2>Cancel Reservation</h2>
+
+    <form action="/cancel" method="post" class="form-box">
+        <label for="pnr">Enter Reservation ID (PNR):</label>
+        <input type="number" id="pnr" name="pnr" required>
+        <button type="submit">Cancel Reservation</button>
+    </form>
+
+    <p th:if="${message}" th:text="${message}" class="message"></p>
+
+    <div class="back-link">
+        <a href="/reservation">🔙 Back to Reservation</a>
+    </div>
+</div>
+
+</body>
+</html>

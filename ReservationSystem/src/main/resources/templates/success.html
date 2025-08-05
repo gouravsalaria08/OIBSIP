@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" th:href="@{/css/SuccessReservation.css}">
+
+</head>
+<body>
+<h2>✅ Reservation Successful!</h2>
+
+<p>Your Reservation ID (PNR) is:
+    <strong th:text="${reservationId}"></strong>
+</p>
+
+<a href="/reservation">Make Another Reservation</a>
+<br>
+<a href="/cancellation">Cancel a Ticket</a>
+</body>
+</html>
