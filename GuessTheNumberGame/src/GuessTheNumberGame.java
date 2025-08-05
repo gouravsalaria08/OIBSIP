@@ -40,30 +40,30 @@ public class GuessTheNumberGame {
                 attemptsLeft--;
 
                 if (userGuess == targetNumber) {
-                    System.out.println("✅ Correct! You've guessed the number.");
+                    System.out.println(" Correct! You've guessed the number.");
                     guessedCorrectly = true;
                     int pointsEarned = attemptsLeft + 1; // More points for fewer attempts
                     totalScore += pointsEarned;
-                    System.out.println("🎉 You earned " + pointsEarned + " points this round.");
+                    System.out.println("You earned " + pointsEarned + " points this round.");
                     break;
                 } else if (userGuess < targetNumber) {
-                    System.out.println("📉 Too low!");
+                    System.out.println("Too low!");
                 } else {
-                    System.out.println("📈 Too high!");
+                    System.out.println("Too high!");
                 }
 
                 if (attemptsLeft > 0) {
-                    System.out.println("⏳ Attempts left: " + attemptsLeft);
+                    System.out.println(" Attempts left: " + attemptsLeft);
                 } else {
-                    System.out.println("❌ Out of attempts! The number was: " + targetNumber);
+                    System.out.println("Out of attempts! The number was: " + targetNumber);
                 }
             }
 
             System.out.println("--------------------------------------");
         }
 
-        System.out.println("🏁 Game Over! Your total score: " + totalScore + " points.");
-        System.out.println("Thanks for playing! 👋");
+        System.out.println(" Game Over! Your total score: " + totalScore + " points.");
+        System.out.println("Thanks for playing! ");
         scanner.close();
     }
 }
