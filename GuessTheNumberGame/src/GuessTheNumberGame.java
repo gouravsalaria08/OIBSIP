@@ -13,7 +13,7 @@ public class GuessTheNumberGame {
         Random random = new Random();
         int totalScore = 0;
 
-        System.out.println("🎯 Welcome to 'Guess the Number' Game!");
+        System.out.println("Welcome to 'Guess the Number' Game!");
         System.out.println("Guess a number between " + RANGE_START + " and " + RANGE_END);
         System.out.println("You have " + MAX_ATTEMPTS + " attempts per round.");
         System.out.println("You will play " + MAX_ROUNDS + " rounds.\n");
@@ -23,7 +23,7 @@ public class GuessTheNumberGame {
             int attemptsLeft = MAX_ATTEMPTS;
             boolean guessedCorrectly = false;
 
-            System.out.println("🔁 Round " + round + " begins!");
+            System.out.println("Round " + round + " begins!");
 
             while (attemptsLeft > 0) {
                 System.out.print("Enter your guess: ");
@@ -33,7 +33,7 @@ public class GuessTheNumberGame {
                 try {
                     userGuess = Integer.parseInt(scanner.nextLine());
                 } catch (NumberFormatException e) {
-                    System.out.println("⚠️ Please enter a valid integer!");
+                    System.out.println("Please enter a valid integer!");
                     continue;
                 }
 
